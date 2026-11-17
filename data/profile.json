@@ -639,12 +639,28 @@
   ],
   "grants": [
     {
-      "name": "NRF Basic Research Program B (Inclusive Track)",
+      "program": "NRF Basic Research Program B (Inclusive Track)",
+      "title": "Mitigating Distribution Shift in Mental Health Prediction via Non-Parametric Multi-Agent Dynamic Context Modeling",
       "role": "Principal Investigator",
-      "funder": "National Research Foundation of Korea",
-      "start": "September 2026",
-      "end": "August 2029",
-      "status": "Awarded"
+      "funder": "National Research Foundation of Korea (NRF)",
+      "dates": "Sep 2026 – Aug 2029",
+      "funding": "KRW 180 million over three years"
+    },
+    {
+      "program": "Jang Young Sil Fellow (Excellence Track)",
+      "title": "Development of a Multi-Agent-based Longitudinal Personalization Framework for User Mental Health Monitoring",
+      "role": "Principal Investigator",
+      "funder": "Ministry of Science and ICT (MSIT) and KAIST",
+      "dates": "Apr 2026 – Dec 2026",
+      "funding": "KRW 80 million annual research budget"
+    },
+    {
+      "program": "NRF Ph.D. Fellowship",
+      "title": "Research on Supporting Art Psychotherapy through Augmented Artificial Intelligence",
+      "role": "Principal Investigator",
+      "funder": "National Research Foundation of Korea (NRF)",
+      "dates": "Jun 2021 – May 2023",
+      "funding": "KRW 40 million over two years"
     }
   ]
 }

@@ -222,3 +222,11 @@ strong { font-weight: 600; }
 .book-list h3 a { color:var(--ink); }
 .book-list p { font-size:12px; color:var(--muted); }
 .book-credit { margin-top:3px; }
+
+/* Research funding: role, scope, term, and amount. */
+.grant-list { list-style:none; margin:0; padding:0; }
+.grant-list li { margin-bottom:22px; }
+.grant-list h3 { font-size:15px; font-weight:600; line-height:1.5; margin-bottom:5px; }
+.grant-list p { font-size:12px; color:var(--muted); line-height:1.75; }
+.grant-list .grant-title { color:var(--ink); margin-bottom:4px; }
+.grant-details { margin-top:2px; }

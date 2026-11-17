@@ -51,6 +51,7 @@ companion_pubs = sorted((p for p in pubs if p['type'] in ['companion', 'workshop
 publications = '\n'.join(publication(p) for p in main_pubs)
 companion_publications = '\n'.join(publication(p) for p in companion_pubs)
 books_reports = '\n'.join(f'<li><h3>{link(b["links"]["report"], e(b["title"]))}</h3><p>{e(b["publisher"])}, {b["year"]}.</p><p class="book-credit">{e(b["type"])} (in {e(b["language"])}). {e(b["user_role"])}.</p></li>' for b in data.get('books_reports', []))
+grants = '\n'.join(f'<li><h3>{e(g["program"])}</h3><p class="grant-title">{e(g["title"])}</p><p><strong>{e(g["role"])}</strong> · {e(g["funder"])}</p><p class="grant-details">{e(g["dates"])} · {e(g["funding"])}</p></li>' for g in data['grants'])
 reviewers = '\n'.join(f'<li>Reviewer, {e(v["venue"])} ({e(v["years"])})</li>' for v in data['service']['reviewer'])
 
 html = '''<!doctype html>
@@ -90,8 +91,8 @@ html = '''<!doctype html>
 <section id="about" class="about" aria-labelledby="about-heading">
   <h2 id="about-heading">About Me</h2>
   <p>I am a postdoctoral researcher and Jang Young Sil Fellow (Excellence Track) at <a href="https://www.kaist.ac.kr/en/">KAIST</a>, working with <a href="https://ic.kaist.ac.kr/">Uichin Lee</a> in the <a href="https://ic.kaist.ac.kr/">Interactive Computing Lab</a>.</p>
-  <p>My research lies at the intersection of machine learning and human–computer interaction. I study how AI systems can model individuals from everyday data and adapt to changes in their behavior and context over time.</p>
-  <p>This work follows two connected directions. <strong>(1) Longitudinal personalization:</strong> I study agent memory and user digital twins for mental health monitoring and everyday support. <strong>(2) Interpretable and responsible AI:</strong> I develop multimodal learning methods and examine how people understand, use, and are affected by AI systems.</p>
+  <p>My research lies at the intersection of machine learning and human–computer interaction. I study how AI systems can model individuals from everyday data and adapt to changes in their behavior and context over time. My broader work includes multimodal learning, model interpretability, and responsible human–AI interaction.</p>
+  <p>My current work focuses on <strong>personal AI that learns from everyday records and adapts as people change</strong>. I am particularly interested in user digital twins and behavior-grounded simulation for evaluating and training personal agents, including their memory, personalization, and proactive support. This includes exploring reinforcement-learning environments informed by longitudinal user data, and how users can inspect and revise their digital representations.</p>
   <p>I received my Ph.D. in Artificial Intelligence from Hanyang University, advised by <a href="https://hcc.hanyang.ac.kr/">Kyungsik Han</a>. Previously, I was a visiting scholar at Pennsylvania State University, working with Dongwon Lee.</p>
 </section>
 
@@ -117,8 +118,8 @@ html = '''<!doctype html>
 </section>
 
 <section id="grants" class="section grants" aria-labelledby="grants-heading">
-  <div class="section-heading"><h2 id="grants-heading">Grants &amp; fellowships</h2></div>
-  <ul class="funding-list"><li><span>Sep 2026–<br>Aug 2029</span><div><h3>NRF Basic Research Program B (Inclusive Track)</h3><p>Principal Investigator · National Research Foundation of Korea</p></div></li><li><span>2026–present</span><div><h3>Jang Young Sil Fellowship (Excellence Track)</h3><p>KAIST</p></div></li><li><span>2021–2023</span><div><h3>Ph.D. Fellowship</h3><p>National Research Foundation of Korea</p></div></li></ul>
+  <div class="section-heading"><h2 id="grants-heading">Research Grants</h2></div>
+  <ul class="grant-list">''' + grants + '''</ul>
 </section>
 
 <section id="service" class="section service" aria-labelledby="service-heading"><h2 id="service-heading">Academic Services</h2>
