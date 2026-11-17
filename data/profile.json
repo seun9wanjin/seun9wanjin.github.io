@@ -1,0 +1,640 @@
+{
+  "name": "Seungwan Jin",
+  "email": "seungwan@kaist.ac.kr",
+  "title": "Postdoctoral Researcher · KAIST Jang Young Sil Fellow",
+  "affiliation": "Interactive Computing Lab, School of Computing, KAIST",
+  "advisor": "Uichin Lee",
+  "links": {
+    "scholar": "https://scholar.google.com/citations?user=OYYoqS0AAAAJ",
+    "dblp": "https://dblp.org/pid/264/7703.html",
+    "linkedin": "https://www.linkedin.com/in/seungwanjin",
+    "github": "https://github.com/seun9wanjin",
+    "lab": "https://ic.kaist.ac.kr/"
+  },
+  "publications": [
+    {
+      "id": "dycon",
+      "title": "Dynamic Context Modeling for Longitudinal Mental Health Monitoring under Distribution Shift",
+      "authors": [
+        "Seungwan Jin",
+        "Taehyung Noh",
+        "Junghyun Kim",
+        "Uichin Lee",
+        "Kyungsik Han"
+      ],
+      "year": 2026,
+      "venue": "NeurIPS",
+      "type": "conference",
+      "status": "accepted",
+      "role": "first",
+      "selected": true,
+      "area": "Longitudinal personalization",
+      "links": {
+        "paper": "https://ic.kaist.ac.kr/publications/papers/jin2026dynamic.pdf",
+        "code": "https://github.com/seun9wanjin/DyCon"
+      },
+      "summary": "Personalizes mental health prediction by evolving a natural-language context for each user, addressing differences across people and behavioral changes over time without updating model parameters."
+    },
+    {
+      "id": "deceptive-persuasion",
+      "title": "“Can LLMs Persuade Humans with Deception?”: From a Deceptive Strategy Taxonomy to a Large-Scale Empirical Study",
+      "authors": [
+        "Haein Yeo",
+        "Seungwan Jin",
+        "Taehyung Noh",
+        "Yejin Shin",
+        "Sangyeon Kang",
+        "Sangwoo Heo",
+        "Jiwon Chung",
+        "Hwarim Hyun",
+        "Kyungsik Han"
+      ],
+      "year": 2026,
+      "venue": "CHI",
+      "type": "conference",
+      "status": "published",
+      "role": "coauthor",
+      "selected": true,
+      "area": "Responsible AI",
+      "links": {
+        "doi": "https://doi.org/10.1145/3772318.3791188",
+        "paper": "https://astlyi.s3.ap-northeast-2.amazonaws.com/2026/2026_CHI_Can_LLMs_Persuade_Humans_with_Deception.pdf"
+      },
+      "summary": "Develops a taxonomy of deceptive persuasion by language models and examines how these strategies affect people’s judgments and vulnerability."
+    },
+    {
+      "id": "triple-aaai",
+      "title": "TRIPLE: Theory-Driven Integration of Planned and Habitual Behaviors for LLM-based Personalization",
+      "authors": [
+        "Taehyung Noh",
+        "Seungwan Jin",
+        "Haein Yeo",
+        "Kyungsik Han"
+      ],
+      "year": 2026,
+      "venue": "AAAI",
+      "type": "conference",
+      "status": "published",
+      "role": "coauthor",
+      "selected": true,
+      "area": "Longitudinal personalization",
+      "links": {
+        "doi": "https://doi.org/10.1609/aaai.v40i21.38818",
+        "project": "https://yestaehyung.github.io/aaai26-triple/"
+      },
+      "note": "Oral presentation",
+      "summary": "Combines planned and habitual behavior in theory-driven user profiles to improve personalization and make behavioral reasoning more interpretable."
+    },
+    {
+      "id": "triple-cikm",
+      "title": "Externalizing Social-Cognitive Structures for User Modeling: Toward Theory-Driven Profiling with LLMs",
+      "authors": [
+        "Taehyung Noh",
+        "Seungwan Jin",
+        "Haein Yeo",
+        "Kyungsik Han"
+      ],
+      "year": 2025,
+      "venue": "CIKM",
+      "type": "conference",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Longitudinal personalization",
+      "links": {
+        "doi": "https://doi.org/10.1145/3746252.3760965",
+        "paper": "https://astlyi.s3.ap-northeast-2.amazonaws.com/2025/2025_CIKM_TRIPLE.pdf",
+        "project": "https://yestaehyung.github.io/cikm25-triple/"
+      }
+    },
+    {
+      "id": "engagement",
+      "title": "“I Don’t Know Why I Should Use This App”: Holistic Analysis on User Engagement Challenges in Mobile Mental Health",
+      "authors": [
+        "Seungwan Jin",
+        "Bogoan Kim",
+        "Kyungsik Han"
+      ],
+      "year": 2025,
+      "venue": "CHI",
+      "type": "conference",
+      "status": "published",
+      "role": "co-first",
+      "selected": true,
+      "area": "Mental health & well-being",
+      "links": {
+        "doi": "https://doi.org/10.1145/3706598.3713732",
+        "paper": "https://astlyi.s3.ap-northeast-2.amazonaws.com/2025/2025_CHI_TAPS.pdf"
+      },
+      "note": "Equal contribution: Seungwan Jin and Bogoan Kim",
+      "summary": "A scoping review of 111 empirical studies identifies barriers to sustained engagement and design directions for adaptive, continuous, and multimodal mental health support."
+    },
+    {
+      "id": "pado",
+      "title": "PADO: Personality-induced multi-Agents for Detecting OCEAN in human-generated texts",
+      "authors": [
+        "Haein Yeo",
+        "Taehyeong Noh",
+        "Seungwan Jin",
+        "Kyungsik Han"
+      ],
+      "year": 2025,
+      "venue": "COLING",
+      "type": "conference",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Longitudinal personalization",
+      "links": {
+        "paper": "https://aclanthology.org/2025.coling-main.382/"
+      },
+      "note": "Oral presentation"
+    },
+    {
+      "id": "icev2",
+      "title": "ICEv2: Interpretability, Comprehensiveness, and Explainability in Vision Transformer",
+      "authors": [
+        "Hoyoung Choi",
+        "Seungwan Jin",
+        "Kyungsik Han"
+      ],
+      "year": 2025,
+      "venue": "International Journal of Computer Vision",
+      "type": "journal",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Multimodal & interpretable AI",
+      "links": {
+        "doi": "https://doi.org/10.1007/s11263-024-02290-6"
+      },
+      "note": "Published online November 2024; volume 133 (2025), pp. 2487–2504"
+    },
+    {
+      "id": "predict",
+      "title": "PREDICT: Multi-Agent-based Debate Simulation for Generalized Hate Speech Detection",
+      "authors": [
+        "Someen Park",
+        "Jaehoon Kim",
+        "Seungwan Jin",
+        "Sohyun Park",
+        "Kyungsik Han"
+      ],
+      "year": 2024,
+      "venue": "EMNLP",
+      "type": "conference",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Responsible AI",
+      "links": {
+        "doi": "https://doi.org/10.18653/v1/2024.emnlp-main.1166",
+        "paper": "https://aclanthology.org/2024.emnlp-main.1166/",
+        "code": "https://github.com/Hanyang-HCC-Lab/PREDICT"
+      },
+      "note": "Oral presentation"
+    },
+    {
+      "id": "fashion-fine",
+      "title": "Integration of Global and Local Representations for Fine-grained Cross-modal Alignment",
+      "authors": [
+        "Seungwan Jin",
+        "Hoyoung Choi",
+        "Taehyung Noh",
+        "Kyungsik Han"
+      ],
+      "year": 2024,
+      "venue": "ECCV",
+      "type": "conference",
+      "status": "published",
+      "role": "first",
+      "selected": true,
+      "area": "Multimodal & interpretable AI",
+      "links": {
+        "doi": "https://doi.org/10.1007/978-3-031-73010-8_4",
+        "paper": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10886.pdf"
+      },
+      "summary": "Aligns images and language at fine granularity by integrating global representations with local image patches and focusing learning on difficult negative examples."
+    },
+    {
+      "id": "label-aware",
+      "title": "Label-aware Hard Negative Sampling Strategies with Momentum Contrastive Learning for Implicit Hate Speech Detection",
+      "authors": [
+        "Jaehoon Kim",
+        "Seungwan Jin",
+        "Sohyun Park",
+        "Someen Park",
+        "Kyungsik Han"
+      ],
+      "year": 2024,
+      "venue": "Findings of ACL",
+      "type": "conference",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Responsible AI",
+      "links": {
+        "doi": "https://doi.org/10.18653/v1/2024.findings-acl.957",
+        "paper": "https://aclanthology.org/2024.findings-acl.957/"
+      }
+    },
+    {
+      "id": "social-anxiety",
+      "title": "An Empirical Study on Social Anxiety in a Virtual Environment through Mediating Variables and Multiple Sensor Data",
+      "authors": [
+        "Eunji Kim",
+        "Seungwan Jin",
+        "Kyungsik Han"
+      ],
+      "year": 2024,
+      "venue": "Proceedings of the ACM on Human-Computer Interaction (CSCW)",
+      "type": "journal",
+      "status": "published",
+      "role": "co-first",
+      "selected": false,
+      "area": "Mental health & well-being",
+      "links": {
+        "doi": "https://doi.org/10.1145/3686977"
+      },
+      "note": "Equal contribution: Eunji Kim and Seungwan Jin"
+    },
+    {
+      "id": "ice",
+      "title": "Adversarial Normalization: I Can visualize Everything (ICE)",
+      "authors": [
+        "Hoyoung Choi",
+        "Seungwan Jin",
+        "Kyungsik Han"
+      ],
+      "year": 2023,
+      "venue": "CVPR",
+      "type": "conference",
+      "status": "published",
+      "role": "co-first",
+      "selected": true,
+      "area": "Multimodal & interpretable AI",
+      "links": {
+        "doi": "https://doi.org/10.1109/CVPR52729.2023.01166",
+        "paper": "https://openaccess.thecvf.com/content/CVPR2023/html/Choi_Adversarial_Normalization_I_Can_Visualize_Everything_ICE_CVPR_2023_paper.html"
+      },
+      "note": "Equal contribution: Hoyoung Choi and Seungwan Jin",
+      "summary": "Visualizes class-specific evidence in vision transformers through patch-wise classification and adversarial normalization."
+    },
+    {
+      "id": "art-therapy",
+      "title": "AI-Augmented Art Psychotherapy through a Hierarchical Co-Attention Mechanism",
+      "authors": [
+        "Seungwan Jin",
+        "Hoyoung Choi",
+        "Kyungsik Han"
+      ],
+      "year": 2022,
+      "venue": "CIKM",
+      "type": "conference",
+      "status": "published",
+      "role": "first",
+      "selected": false,
+      "area": "Mental health & well-being",
+      "links": {
+        "doi": "https://doi.org/10.1145/3511808.3557542"
+      }
+    },
+    {
+      "id": "fashionq",
+      "title": "FashionQ: An AI-Driven Creativity Support Tool for Facilitating Ideation in Fashion Design",
+      "authors": [
+        "Youngseung Jeon",
+        "Seungwan Jin",
+        "Patrick C. Shih",
+        "Kyungsik Han"
+      ],
+      "year": 2021,
+      "venue": "CHI",
+      "type": "conference",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Human-AI interaction",
+      "links": {
+        "doi": "https://doi.org/10.1145/3411764.3445093"
+      }
+    },
+    {
+      "id": "fancy",
+      "title": "FANCY: Human-centered, Deep Learning-based Framework for Fashion Style Analysis",
+      "authors": [
+        "Youngseung Jeon",
+        "Seungwan Jin",
+        "Kyungsik Han"
+      ],
+      "year": 2021,
+      "venue": "The Web Conference (WWW)",
+      "type": "conference",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Multimodal & interpretable AI",
+      "links": {
+        "doi": "https://doi.org/10.1145/3442381.3449833"
+      }
+    },
+    {
+      "id": "nivs",
+      "title": "News Information Verification System (NIVS) supporting Heuristic Information Processing and Building a Healthy News Diet",
+      "authors": [
+        "Seungwan Jin",
+        "Hye Jin Jeon",
+        "Kyungsik Han"
+      ],
+      "year": 2021,
+      "venue": "International Conference on Next Generation Computing (ICNGC)",
+      "type": "conference",
+      "status": "published",
+      "role": "first",
+      "selected": false,
+      "area": "Responsible AI",
+      "links": {}
+    },
+    {
+      "id": "sonju",
+      "title": "Sonju: A Context-Aware Teachable Agent for Eliciting Older Adults’ Situated Knowledge",
+      "authors": [
+        "JinYoung Yoo",
+        "Somin Park",
+        "Sueun Jang",
+        "Seungwan Jin",
+        "Uichin Lee"
+      ],
+      "year": 2026,
+      "venue": "UbiComp / ISWC Companion — Student Challenge",
+      "type": "companion",
+      "status": "published",
+      "role": "co-advisor",
+      "selected": false,
+      "area": "Human-AI interaction",
+      "links": {
+        "paper": "https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf",
+        "record": "https://ic.kaist.ac.kr/publications"
+      },
+      "note": "People’s Choice Student Challenge Award; co-advised with Uichin Lee"
+    },
+    {
+      "id": "clinician-explanations",
+      "title": "Designing Clinician Centered Explanations for Sensing-based Longitudinal Mental Health Monitoring",
+      "authors": [
+        "Esther Kang",
+        "Youngji Koh",
+        "Seungwan Jin",
+        "Uichin Lee"
+      ],
+      "year": 2026,
+      "venue": "XAI for U Workshop at UbiComp / ISWC",
+      "type": "workshop",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Mental health & well-being",
+      "links": {
+        "paper": "https://ic.kaist.ac.kr/publications/papers/kang2026clinician.pdf"
+      }
+    },
+    {
+      "id": "driver-stress",
+      "title": "A Contactless and Non-Intrusive System for Driver’s Stress Detection",
+      "authors": [
+        "Muhammad Salman",
+        "Hyunkyu Jang",
+        "Youngtae Noh",
+        "Seungwan Jin",
+        "Dayoung Jeong",
+        "Hoyoung Choi",
+        "Kyungsik Han",
+        "Hyangmi Kim"
+      ],
+      "year": 2023,
+      "venue": "UbiComp / ISWC Adjunct — Poster",
+      "type": "companion",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Mental health & well-being",
+      "links": {
+        "doi": "https://doi.org/10.1145/3594739.3610691"
+      }
+    },
+    {
+      "id": "fashionq-lbw",
+      "title": "FashionQ: An Interactive Tool for Analyzing Fashion Style Trend with Quantitative Criteria",
+      "authors": [
+        "Youngseung Jeon",
+        "Seungwan Jin",
+        "Bogoan Kim",
+        "Kyungsik Han"
+      ],
+      "year": 2020,
+      "venue": "CHI Extended Abstracts",
+      "type": "companion",
+      "status": "published",
+      "role": "coauthor",
+      "selected": false,
+      "area": "Human-AI interaction",
+      "links": {
+        "doi": "https://doi.org/10.1145/3334480.3382978"
+      }
+    }
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Artificial Intelligence",
+      "institution": "Hanyang University",
+      "dates": "Sep 2021 – Feb 2026",
+      "advisor": "Kyungsik Han"
+    },
+    {
+      "degree": "B.S. in Environmental Science",
+      "institution": "Konkuk University",
+      "dates": "Mar 2010 – Feb 2014"
+    }
+  ],
+  "positions": [
+    {
+      "role": "Postdoctoral Researcher / Jang Young Sil Fellow (Excellence Track)",
+      "institution": "KAIST, Interactive Computing Lab",
+      "dates": "Apr 2026 – present",
+      "mentor": "Uichin Lee"
+    },
+    {
+      "role": "Graduate Research Assistant",
+      "institution": "Hanyang University, Human-Centered Computing Lab",
+      "dates": "Sep 2021 – Feb 2026",
+      "mentor": "Kyungsik Han"
+    },
+    {
+      "role": "Visiting Scholar",
+      "institution": "Pennsylvania State University, PIKE Research Group",
+      "dates": "Aug 2019 – Feb 2020",
+      "mentor": "Dongwon Lee"
+    },
+    {
+      "role": "Graduate Research Assistant",
+      "institution": "Ajou University, Human-Computer Interaction Lab",
+      "dates": "Mar 2019 – Aug 2021",
+      "mentor": "Kyungsik Han"
+    }
+  ],
+  "service": {
+    "reviewer": [
+      {
+        "venue": "CHI",
+        "years": "2024, 2027"
+      },
+      {
+        "venue": "CHI Late-Breaking Work",
+        "years": "2024–2025"
+      },
+      {
+        "venue": "CSCW",
+        "years": "2024"
+      },
+      {
+        "venue": "UIST",
+        "years": "2026"
+      },
+      {
+        "venue": "NeurIPS",
+        "years": "2026"
+      },
+      {
+        "venue": "IMWUT",
+        "years": "2026"
+      },
+      {
+        "venue": "CVPR",
+        "years": "2026"
+      },
+      {
+        "venue": "ACL Rolling Review",
+        "years": "January, March, May 2026"
+      },
+      {
+        "venue": "DSAA",
+        "years": "2025"
+      },
+      {
+        "venue": "The Web Conference",
+        "years": "2027"
+      }
+    ],
+    "volunteer": [
+      {
+        "venue": "CHI",
+        "year": 2020
+      }
+    ]
+  },
+  "teaching": [
+    {
+      "role": "Teaching Fellow",
+      "course": "Human-Computer Interaction",
+      "language": "English",
+      "terms": "Fall 2025"
+    },
+    {
+      "role": "Co-lecturer",
+      "course": "Creative Software Design",
+      "language": "English",
+      "terms": "Fall 2021, 2022, 2023"
+    },
+    {
+      "role": "Co-lecturer",
+      "course": "Introduction to Software Design",
+      "language": "English",
+      "terms": "Spring 2022, 2023"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Data Structures and Practice",
+      "language": "Korean",
+      "terms": "Spring 2021"
+    },
+    {
+      "role": "Mentor",
+      "course": "Extensive IT Project Training",
+      "language": "Korean",
+      "terms": "Fall 2020"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Human-Computer Interaction",
+      "language": "Korean",
+      "terms": "Spring 2020"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "The Basics of Data Analytics",
+      "language": "Korean",
+      "terms": "Spring 2019"
+    }
+  ],
+  "awards": [
+    {
+      "name": "People’s Choice Student Challenge Award",
+      "institution": "UbiComp / ISWC",
+      "year": 2026
+    },
+    {
+      "name": "Best Paper Award",
+      "institution": "Korea Data Mining Society",
+      "year": 2025
+    },
+    {
+      "name": "Best Paper Award",
+      "institution": "Korea Data Mining Society",
+      "year": 2024
+    },
+    {
+      "name": "Best Global Research Team Award",
+      "institution": "IITP",
+      "year": 2021
+    }
+  ],
+  "fellowships": [
+    {
+      "name": "Jang Young Sil Fellow (Excellence Track)",
+      "institution": "KAIST",
+      "years": "2026"
+    },
+    {
+      "name": "Ph.D. Fellowship",
+      "institution": "National Research Foundation of Korea",
+      "years": "2021–2023"
+    }
+  ],
+  "books_reports": [
+    {
+      "id": "gpai-framework",
+      "title": "General-Purpose Artificial Intelligence (GPAI) Risk Management Framework",
+      "year": 2025,
+      "month": "February",
+      "publisher": "Telecommunications Technology Association (TTA)",
+      "type": "Research report",
+      "language": "Korean",
+      "authors": [
+        "Yeajin Shin",
+        "Sangyeon Kang"
+      ],
+      "contributing_researchers": [
+        "Kyungsik Han",
+        "Haein Yeo",
+        "Misun Joo",
+        "Seungwan Jin",
+        "Sohyun Park",
+        "Junghyun Kim"
+      ],
+      "user_role": "Contributing researcher",
+      "links": {
+        "report": "https://astlyi.s3.ap-northeast-2.amazonaws.com/2025/TTA_%E1%84%87%E1%85%A5%E1%86%B7%E1%84%8B%E1%85%AD%E1%86%BC+%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC+(GPAI)+%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A5%E1%86%B7+%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5+%E1%84%91%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3.pdf"
+      }
+    }
+  ]
+}
