@@ -58,9 +58,9 @@ grants = '\n'.join(f'<li><h3>{e(g["program"])}</h3><p class="grant-title">{e(g["
 # Preserve the source order for venues with the same latest service year.
 reviewers = sorted(data['service']['reviewer'], key=lambda v: max(map(int, re.findall(r'\d{4}', v['years']))), reverse=True)
 reviewer_groups = []
-for category, label in [('ai', 'AI & Machine Learning'), ('hci', 'Human–Computer Interaction')]:
+for category, label in [('ai', 'Artificial Intelligence'), ('hci', 'Human–Computer Interaction')]:
     items = '\n'.join(f'<li>{e(v["venue"])} ({e(v["years"])})</li>' for v in reviewers if v['category'] == category)
-    reviewer_groups.append(f'<div class="reviewer-group"><h4 class="service-group-title">{e(label)}</h4>\n<ul class="service-list">{items}</ul></div>')
+    reviewer_groups.append(f'<div class="service-group"><h3 class="service-group-title">Reviewer · {e(label)}</h3>\n<ul class="service-list">{items}</ul></div>')
 reviewer_groups = '\n'.join(reviewer_groups)
 volunteers = '\n'.join(f'<li>{e(v["venue"])} ({v["year"]})</li>' for v in data['service']['volunteer'])
 
@@ -133,10 +133,9 @@ html = '''<!doctype html>
 </section>
 
 <section id="service" class="section service" aria-labelledby="service-heading"><h2 id="service-heading">Academic Services</h2>
-  <h3 class="service-role">Reviewer</h3>
   ''' + reviewer_groups + '''
-  <h3 class="service-role">Student Volunteer</h3>
-  <ul class="service-list">''' + volunteers + '''</ul>
+  <div class="service-group"><h3 class="service-group-title">Student Volunteer</h3>
+  <ul class="service-list">''' + volunteers + '''</ul></div>
 </section>
 <section id="teaching" class="section teaching" aria-labelledby="teaching-heading"><h2 id="teaching-heading">Teaching</h2>
   <ul class="service-list"><li>Teaching Fellow, Human-Computer Interaction (Fall 2025)</li><li>Co-lecturer, Creative Software Design (Fall 2021, 2022, 2023)</li><li>Co-lecturer, Introduction to Software Design (Spring 2022, 2023)</li></ul>
