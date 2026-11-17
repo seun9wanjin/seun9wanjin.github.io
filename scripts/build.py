@@ -63,7 +63,7 @@ for category, label in [('ai', 'Artificial Intelligence (AI)'), ('hci', 'Human-C
     reviewer_groups.append(f'<div class="service-group"><h3 class="service-group-title">Reviewer · {e(label)}</h3>\n<ul class="service-list">{items}</ul></div>')
 reviewer_groups = '\n'.join(reviewer_groups)
 volunteers = '\n'.join(f'<li>{e(v["venue"])} ({v["year"]})</li>' for v in data['service']['volunteer'])
-awards = '\n'.join(f'<li><strong>{a["year"]}</strong> · {e(a["name"])} — {e(a["institution"])}</li>' for a in sorted(data['awards'], key=lambda a: -a['year']))
+awards = '\n'.join(f'<li>{e(a["name"])}, {e(a["institution"])} ({a["year"]})</li>' for a in sorted(data['awards'], key=lambda a: -a['year']))
 
 html = '''<!doctype html>
 <html lang="en">
