@@ -46,7 +46,10 @@ def publication(p):
       <div class="pub-bottom"><div class="pub-links">{links}</div>{note_html}</div>
     </li>'''
 
-publications = '\n'.join(publication(p) for p in sorted(pubs, key=lambda p: -p['year']))
+main_pubs = sorted((p for p in pubs if p['type'] in ['conference', 'journal']), key=lambda p: -p['year'])
+companion_pubs = sorted((p for p in pubs if p['type'] in ['companion', 'workshop']), key=lambda p: -p['year'])
+publications = '\n'.join(publication(p) for p in main_pubs)
+companion_publications = '\n'.join(publication(p) for p in companion_pubs)
 books_reports = '\n'.join(f'<li><h3>{link(b["links"]["report"], e(b["title"]))}</h3><p>{e(b["publisher"])}, {b["year"]}.</p><p class="book-credit">{e(b["type"])} (in {e(b["language"])}). {e(b["user_role"])}.</p></li>' for b in data.get('books_reports', []))
 career = '\n'.join(f'''<li><span class="record-date">{e(p['dates'])}</span><div><h3>{e(p['role'])}</h3><p>{e(p['institution'])}</p>{f'<p class="record-detail">With {e(p["mentor"])}</p>' if 'mentor' in p else ''}</div></li>''' for p in data['positions'])
 education = '\n'.join(f'''<li><span class="record-date">{e(p['dates'])}</span><div><h3>{e(p['degree'])}</h3><p>{e(p['institution'])}</p>{f'<p class="record-detail">Advisor: {e(p["advisor"])}</p>' if 'advisor' in p else ''}</div></li>''' for p in data['education'])
@@ -102,14 +105,17 @@ html = '''<!doctype html>
 </ul></section>
 
 <section id="publications" class="section" aria-labelledby="publications-heading">
-  <div class="section-heading"><h2 id="publications-heading">Publications</h2><a class="quiet-link" href="https://scholar.google.com/citations?user=OYYoqS0AAAAJ">Google Scholar ↗</a></div>
-  <p class="publication-caption">International publications. <sup>*</sup> Equal contribution.</p>
-  <ol id="publication-list" class="publication-list">''' + publications + '''</ol>
+  <div class="section-heading"><h2 id="publications-heading">Publications</h2></div>
+  <p class="publication-caption"><sup>*</sup> Equal contribution.</p>
+  <h3 class="publication-group">Conference &amp; Journal Papers</h3>
+  <ol id="publication-list" class="publication-list" reversed start="''' + str(len(main_pubs)) + '''">''' + publications + '''</ol>
+  <h3 class="publication-group">Workshop, Demo &amp; Companion Papers</h3>
+  <ol id="companion-list" class="publication-list" reversed start="''' + str(len(companion_pubs)) + '''">''' + companion_publications + '''</ol>
 </section>
 
 <section id="books" class="section books" aria-labelledby="books-heading">
   <div class="section-heading"><h2 id="books-heading">Books &amp; Reports</h2></div>
-  <ol class="book-list">''' + books_reports + '''</ol>
+  <ol class="book-list" reversed>''' + books_reports + '''</ol>
 </section>
 
 <section id="grants" class="section grants" aria-labelledby="grants-heading">

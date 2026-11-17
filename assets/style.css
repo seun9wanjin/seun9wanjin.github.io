@@ -92,6 +92,7 @@ strong { font-weight: 600; }
 
 /* Publications */
 .publication-caption { margin-block: 14px 3px; color: var(--muted); font-size: 10px; }
+.publication-group { font-size:15px; font-weight:600; margin-top:23px; }
 .publication-list { margin:16px 0 0; padding-left:24px; }
 .publication { display:list-item; padding:0 0 0 5px; margin-bottom:24px; }
 .publication::marker { color:var(--muted); font-size:12px; }
