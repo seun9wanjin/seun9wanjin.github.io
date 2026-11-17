@@ -60,13 +60,7 @@ strong { font-weight: 600; }
 .profile-sidebar h1 { margin-bottom: 12px; font-size: 23px; font-weight: 650; letter-spacing: -.65px; }
 .profile-info p { color: var(--ink); font-size: 14px; line-height: 1.85; }
 .profile-info .profile-email { margin-bottom:14px; font-size:15px; line-height:1.6; }
-.profile-icons { display:flex; align-items:center; gap:6px; margin:-6px 0 19px; }
-.profile-icons a { display:flex; flex:0 0 30px; align-items:center; justify-content:center; width:30px; height:32px; color:var(--accent); border-radius:3px; }
-.profile-icons a[aria-label="LinkedIn"] { color:#0a66c2; }
-.profile-icons a[aria-label="Google Scholar"] { color:#4285f4; }
-.profile-icons a[aria-label="GitHub"] { color:#24292f; }
-.profile-icons a:hover { background:#eef4f4; }
-.profile-icons svg { display:block; width:26px; height:26px; }
+.profile-links { display:grid; grid-template-columns:max-content max-content; gap:4px 14px; margin:-6px 0 19px; font-size:15px; line-height:1.7; }
 .main-content { min-width: 0; padding-bottom:35px; }
 .about h2 { margin-bottom: 17px; }
 .about p { margin-bottom: 15px; font-size: 18px; line-height: 1.7; }
@@ -176,7 +170,7 @@ strong { font-weight: 600; }
   .profile-info { grid-column: 2; grid-row: 1; padding-top:4px; }
   .profile-sidebar h1 { margin: 0 0 11px; font-size: 24px; }
   .profile-info p { font-size: 14px; line-height: 1.85; }
-  .profile-icons { grid-column:1/-1; grid-row:2; margin:10px 0 0; gap:10px; }
+  .profile-links { grid-column:1/-1; grid-row:2; margin:10px 0 0; }
   .about h2, .service h2 { font-size: 21px; }
   .about p { font-size: 18px; }
   .news li { grid-template-columns: 74px minmax(0, 1fr); gap: 11px; }
@@ -206,7 +200,7 @@ strong { font-weight: 600; }
 }
 
 @media print {
-  .profile-icons, .site-footer, .skip-link { display: none !important; }
+  .profile-links, .site-footer, .skip-link { display: none !important; }
   body { font-size: 11px; }
   a { color: inherit; }
   .wrap { max-width: none; padding: 0; }
