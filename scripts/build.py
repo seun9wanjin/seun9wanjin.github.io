@@ -51,9 +51,6 @@ companion_pubs = sorted((p for p in pubs if p['type'] in ['companion', 'workshop
 publications = '\n'.join(publication(p) for p in main_pubs)
 companion_publications = '\n'.join(publication(p) for p in companion_pubs)
 books_reports = '\n'.join(f'<li><h3>{link(b["links"]["report"], e(b["title"]))}</h3><p>{e(b["publisher"])}, {b["year"]}.</p><p class="book-credit">{e(b["type"])} (in {e(b["language"])}). {e(b["user_role"])}.</p></li>' for b in data.get('books_reports', []))
-career = '\n'.join(f'''<li><span class="record-date">{e(p['dates'])}</span><div><h3>{e(p['role'])}</h3><p>{e(p['institution'])}</p>{f'<p class="record-detail">With {e(p["mentor"])}</p>' if 'mentor' in p else ''}</div></li>''' for p in data['positions'])
-education = '\n'.join(f'''<li><span class="record-date">{e(p['dates'])}</span><div><h3>{e(p['degree'])}</h3><p>{e(p['institution'])}</p>{f'<p class="record-detail">Advisor: {e(p["advisor"])}</p>' if 'advisor' in p else ''}</div></li>''' for p in data['education'])
-awards = '\n'.join(f'<li><span>{a["year"]}</span><div><strong>{e(a["name"])}</strong><p>{e(a["institution"])}</p></div></li>' for a in data['awards'])
 reviewers = '\n'.join(f'<li>Reviewer, {e(v["venue"])} ({e(v["years"])})</li>' for v in data['service']['reviewer'])
 
 html = '''<!doctype html>
@@ -99,8 +96,9 @@ html = '''<!doctype html>
 </section>
 
 <section class="news" aria-labelledby="news-heading"><h2 id="news-heading">Recent news</h2><ul>
-  <li><time datetime="2026-11">Nov 2026</time><p><a href="https://github.com/seun9wanjin/DyCon">DyCon</a> code released. The paper was accepted to <strong>NeurIPS 2026</strong>; presentation in Sydney is scheduled for December.</p></li>
+  <li><time datetime="2026">2026</time><p>Our paper on <a href="https://ic.kaist.ac.kr/publications/papers/jin2026dynamic.pdf">longitudinal mental health monitoring</a> was accepted to <strong>NeurIPS 2026</strong>. I will present it in Sydney in December.</p></li>
   <li><time datetime="2026-10">Oct 2026</time><p><a href="https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf">Sonju</a> received the <a href="https://www.ubicomp.org/ubicomp-iswc-2026/awards-all/">People’s Choice Student Challenge Award</a> at UbiComp / ISWC 2026. I co-advised the project with Uichin Lee.</p></li>
+  <li><time datetime="2026">2026</time><p>Selected for the <strong>NRF Basic Research Program B (Inclusive Track)</strong> as Principal Investigator.</p></li>
   <li><time datetime="2026-04">Apr 2026</time><p>Joined KAIST as a <strong>Jang Young Sil Fellow (Excellence Track)</strong>.</p></li>
 </ul></section>
 
@@ -120,12 +118,7 @@ html = '''<!doctype html>
 
 <section id="grants" class="section grants" aria-labelledby="grants-heading">
   <div class="section-heading"><h2 id="grants-heading">Grants &amp; fellowships</h2></div>
-  <ul class="funding-list"><li><span>2026–present</span><div><h3>Jang Young Sil Fellowship (Excellence Track)</h3><p>KAIST</p></div></li><li><span>2021–2023</span><div><h3>Ph.D. Fellowship</h3><p>National Research Foundation of Korea</p></div></li></ul>
-</section>
-
-<section id="background" class="section" aria-labelledby="background-heading">
-  <div class="section-heading"><h2 id="background-heading">Background</h2><a class="quiet-link" href="assets/docs/CV-Seungwan-Jin.pdf">Download CV ↗</a></div>
-  <div class="background-grid"><div><h3 class="column-title">Experience</h3><ol class="record-list">''' + career + '''</ol></div><div><h3 class="column-title">Education</h3><ol class="record-list">''' + education + '''</ol><h3 class="column-title honors-heading">Selected honors</h3><ul class="honors-list">''' + awards + '''</ul></div></div>
+  <ul class="funding-list"><li><span>Sep 2026–<br>Aug 2029</span><div><h3>NRF Basic Research Program B (Inclusive Track)</h3><p>Principal Investigator · National Research Foundation of Korea</p></div></li><li><span>2026–present</span><div><h3>Jang Young Sil Fellowship (Excellence Track)</h3><p>KAIST</p></div></li><li><span>2021–2023</span><div><h3>Ph.D. Fellowship</h3><p>National Research Foundation of Korea</p></div></li></ul>
 </section>
 
 <section id="service" class="section service" aria-labelledby="service-heading"><h2 id="service-heading">Academic Services</h2>
