@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build a dependency-free academic homepage from data/profile.json."""
 import json
+import re
 from hashlib import sha256
 from pathlib import Path
 from html import escape as e
@@ -54,7 +55,14 @@ publications = '\n'.join(publication(p) for p in main_pubs)
 companion_publications = '\n'.join(publication(p) for p in companion_pubs)
 books_reports = '\n'.join(f'<li><h3>{link(b["links"]["report"], e(b["title"]))}</h3><p>{e(b["publisher"])}, {b["year"]}.</p><p class="book-credit">{e(b["type"])} (in {e(b["language"])}). {e(b["user_role"])}.</p></li>' for b in data.get('books_reports', []))
 grants = '\n'.join(f'<li><h3>{e(g["program"])}</h3><p class="grant-title">{e(g["title"])}</p><p><strong>{e(g["role"])}</strong> · {e(g["funder"])}</p><p class="grant-details">{e(g["dates"])} · {e(g["funding"])}</p></li>' for g in data['grants'])
-reviewers = '\n'.join(f'<li>Reviewer, {e(v["venue"])} ({e(v["years"])})</li>' for v in data['service']['reviewer'])
+# Preserve the source order for venues with the same latest service year.
+reviewers = sorted(data['service']['reviewer'], key=lambda v: max(map(int, re.findall(r'\d{4}', v['years']))), reverse=True)
+reviewer_groups = []
+for category, label in [('ai', 'AI & Machine Learning'), ('hci', 'Human–Computer Interaction')]:
+    items = '\n'.join(f'<li>{e(v["venue"])} ({e(v["years"])})</li>' for v in reviewers if v['category'] == category)
+    reviewer_groups.append(f'<div class="reviewer-group"><h4 class="service-group-title">{e(label)}</h4>\n<ul class="service-list">{items}</ul></div>')
+reviewer_groups = '\n'.join(reviewer_groups)
+volunteers = '\n'.join(f'<li>{e(v["venue"])} ({v["year"]})</li>' for v in data['service']['volunteer'])
 
 html = '''<!doctype html>
 <html lang="en">
@@ -125,7 +133,10 @@ html = '''<!doctype html>
 </section>
 
 <section id="service" class="section service" aria-labelledby="service-heading"><h2 id="service-heading">Academic Services</h2>
-  <ul class="service-list">''' + reviewers + '''<li>Student Volunteer, CHI (2020)</li></ul>
+  <h3 class="service-role">Reviewer</h3>
+  ''' + reviewer_groups + '''
+  <h3 class="service-role">Student Volunteer</h3>
+  <ul class="service-list">''' + volunteers + '''</ul>
 </section>
 <section id="teaching" class="section teaching" aria-labelledby="teaching-heading"><h2 id="teaching-heading">Teaching</h2>
   <ul class="service-list"><li>Teaching Fellow, Human-Computer Interaction (Fall 2025)</li><li>Co-lecturer, Creative Software Design (Fall 2021, 2022, 2023)</li><li>Co-lecturer, Introduction to Software Design (Spring 2022, 2023)</li></ul>

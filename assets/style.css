@@ -131,7 +131,10 @@ strong { font-weight: 600; }
 .honors-list p { margin-top: 3px; color: var(--muted); font-size: 11px; }
 .service { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--line); }
 .service h2 { margin-bottom: 23px; }
+.service-role { margin-top: 22px; font-size: 18px; font-weight: 600; }
+.service-group-title { margin: 16px 0 0; font-size: 16px; font-weight: 600; line-height: 1.5; }
 .service-list { margin: 16px 0 0; padding-left: 20px; font-size: 16px; line-height: 1.8; }
+.reviewer-group .service-list { margin-top: 7px; }
 .service-list li { margin-bottom: 5px; padding-left: 2px; }
 .site-footer {
   display: flex;

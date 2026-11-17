@@ -486,43 +486,53 @@
     "reviewer": [
       {
         "venue": "CHI",
-        "years": "2024, 2027"
-      },
-      {
-        "venue": "CHI Late-Breaking Work",
-        "years": "2024–2025"
-      },
-      {
-        "venue": "CSCW",
-        "years": "2024"
-      },
-      {
-        "venue": "UIST",
-        "years": "2026"
-      },
-      {
-        "venue": "NeurIPS",
-        "years": "2026"
-      },
-      {
-        "venue": "IMWUT",
-        "years": "2026"
-      },
-      {
-        "venue": "CVPR",
-        "years": "2026"
-      },
-      {
-        "venue": "ACL Rolling Review",
-        "years": "January, March, May 2026"
-      },
-      {
-        "venue": "DSAA",
-        "years": "2025"
+        "years": "2024, 2027",
+        "category": "hci"
       },
       {
         "venue": "The Web Conference",
-        "years": "2027"
+        "years": "2027",
+        "category": "ai"
+      },
+      {
+        "venue": "NeurIPS",
+        "years": "2026",
+        "category": "ai"
+      },
+      {
+        "venue": "CVPR",
+        "years": "2026",
+        "category": "ai"
+      },
+      {
+        "venue": "ACL Rolling Review",
+        "years": "January, March, May 2026",
+        "category": "ai"
+      },
+      {
+        "venue": "UIST",
+        "years": "2026",
+        "category": "hci"
+      },
+      {
+        "venue": "IMWUT",
+        "years": "2026",
+        "category": "hci"
+      },
+      {
+        "venue": "DSAA",
+        "years": "2025",
+        "category": "ai"
+      },
+      {
+        "venue": "CHI Late-Breaking Work",
+        "years": "2024–2025",
+        "category": "hci"
+      },
+      {
+        "venue": "CSCW",
+        "years": "2024",
+        "category": "hci"
       }
     ],
     "volunteer": [
