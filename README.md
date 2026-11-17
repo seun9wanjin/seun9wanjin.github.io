@@ -31,4 +31,4 @@ Open http://localhost:8000. All content is static HTML; no JavaScript is require
 
 The profile photograph is the author-provided formal portrait. The design and implementation are original, informed by the academic websites supplied as references.
 
-The downloadable CV is a public-facing edition. Publication types and acceptance status are preserved; student-challenge and workshop papers are identified explicitly.
+The downloadable CV is the author's original PDF. Replace `assets/docs/CV-Seungwan-Jin.pdf` with the latest approved file and rebuild; the CV link includes a content version so visitors receive the updated PDF.
