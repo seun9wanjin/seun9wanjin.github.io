@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Build a dependency-free academic homepage from data/profile.json."""
 import json
+from hashlib import sha256
 from pathlib import Path
 from html import escape as e
 
 ROOT = Path(__file__).resolve().parents[1]
 data = json.loads((ROOT / 'data/profile.json').read_text())
+css_version = sha256((ROOT / 'assets/style.css').read_bytes()).hexdigest()[:12]
 pubs = data['publications']
 by_id = {p['id']: p for p in pubs}
 by_id['fashion-fine']['links']['code'] = 'https://github.com/seun9wanjin/Fashion-FINE'
@@ -70,7 +72,7 @@ html = '''<!doctype html>
   <meta property="og:image" content="https://seun9wanjin.github.io/assets/images/seungwan-jin-formal.png">
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=__CSS_VERSION__">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Seungwan Jin","url":"https://seun9wanjin.github.io/","image":"https://seun9wanjin.github.io/assets/images/seungwan-jin-formal.png","jobTitle":"Postdoctoral Researcher","affiliation":{"@type":"Organization","name":"KAIST"},"email":"seungwan@kaist.ac.kr","sameAs":["https://scholar.google.com/citations?user=OYYoqS0AAAAJ","https://github.com/seun9wanjin","https://www.linkedin.com/in/seungwanjin/"]}</script>
 </head>
 <body>
@@ -136,5 +138,5 @@ html = '''<!doctype html>
 </body>
 </html>
 '''
-(ROOT / 'index.html').write_text(html)
+(ROOT / 'index.html').write_text(html.replace('__CSS_VERSION__', css_version))
 print(f'Built index.html with {len(pubs)} publications.')
