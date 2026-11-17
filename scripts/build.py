@@ -39,7 +39,7 @@ def publication(p):
     title_url = p['links'].get('paper') or p['links'].get('doi') or p['links'].get('project')
     title = link(title_url, e(p['title'])) if title_url else e(p['title'])
     note_html = f'<span class="pub-note {"award" if is_award else ""}">{e(note)}</span>' if note else ''
-    accepted = ' <span class="status">Accepted</span>' if p['status'] == 'accepted' else ''
+    accepted = ' <span class="status">To appear</span>' if p['status'] == 'accepted' else ''
     return f'''<li class="publication" id="paper-{p['id']}">
       <h3>{title}</h3><p class="authors">{', '.join(authors)}</p>
       <p class="pub-venue">{e(p['venue'])} {p['year']}{accepted}</p>
