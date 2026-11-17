@@ -63,6 +63,7 @@ for category, label in [('ai', 'Artificial Intelligence (AI)'), ('hci', 'Human-C
     reviewer_groups.append(f'<div class="service-group"><h3 class="service-group-title">Reviewer · {e(label)}</h3>\n<ul class="service-list">{items}</ul></div>')
 reviewer_groups = '\n'.join(reviewer_groups)
 volunteers = '\n'.join(f'<li>{e(v["venue"])} ({v["year"]})</li>' for v in data['service']['volunteer'])
+awards = '\n'.join(f'<li><strong>{a["year"]}</strong> · {e(a["name"])} — {e(a["institution"])}</li>' for a in sorted(data['awards'], key=lambda a: -a['year']))
 
 html = '''<!doctype html>
 <html lang="en">
@@ -130,6 +131,10 @@ html = '''<!doctype html>
 <section id="grants" class="section grants" aria-labelledby="grants-heading">
   <div class="section-heading"><h2 id="grants-heading">Research Grants</h2></div>
   <ul class="grant-list">''' + grants + '''</ul>
+</section>
+
+<section id="awards" class="section awards" aria-labelledby="awards-heading"><h2 id="awards-heading">Awards</h2>
+  <ul class="service-list">''' + awards + '''</ul>
 </section>
 
 <section id="service" class="section service" aria-labelledby="service-heading"><h2 id="service-heading">Academic Services</h2>
