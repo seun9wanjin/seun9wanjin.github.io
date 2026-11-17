@@ -97,16 +97,16 @@ html = '''<!doctype html>
   <p>I received my Ph.D. in Artificial Intelligence from Hanyang University, advised by <a href="https://hcc.hanyang.ac.kr/">Kyungsik Han</a>. From August 2019 to February 2020, I was a visiting scholar in the <a href="https://pike.psu.edu/">PIKE Lab</a> at Pennsylvania State University, working with <a href="https://pike.psu.edu/dongwon/">Dongwon Lee</a>.</p>
 </section>
 
-<section class="news" aria-labelledby="news-heading"><h2 id="news-heading">Recent news</h2><ul>
+<section class="news" aria-labelledby="news-heading"><h2 id="news-heading">Recent News</h2><ul>
   <li><time datetime="2026">2026</time><p>Our paper on <a href="https://ic.kaist.ac.kr/publications/papers/jin2026dynamic.pdf">longitudinal mental health monitoring</a> was accepted to <strong>NeurIPS 2026</strong>. I will present it in Sydney in December.</p></li>
-  <li><time datetime="2026-10">Oct 2026</time><p><a href="https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf">Sonju</a> received the <a href="https://www.ubicomp.org/ubicomp-iswc-2026/awards-all/">People’s Choice Student Challenge Award</a> at UbiComp / ISWC 2026. I co-advised the project with Uichin Lee.</p></li>
+  <li><time datetime="2026-10">Oct 2026</time><p><a href="https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf">Sonju</a> received the <a class="news-award" href="https://www.ubicomp.org/ubicomp-iswc-2026/awards-all/">People’s Choice Student Challenge Award</a> at UbiComp / ISWC 2026. I co-advised the project with Uichin Lee.</p></li>
   <li><time datetime="2026">2026</time><p>Selected for the <strong>NRF Basic Research Program B (Inclusive Track)</strong> as Principal Investigator.</p></li>
   <li><time datetime="2026-04">Apr 2026</time><p>Joined KAIST as a <strong>Jang Young Sil Fellow (Excellence Track)</strong>.</p></li>
 </ul></section>
 
 <section id="publications" class="section" aria-labelledby="publications-heading">
   <div class="section-heading"><h2 id="publications-heading">Publications</h2></div>
-  <p class="publication-caption"><sup>*</sup> Equal contribution.</p>
+  <p class="publication-caption"><sup>*</sup> Equal Contribution.</p>
   <h3 class="publication-group">Conference &amp; Journal Papers</h3>
   <ol id="publication-list" class="publication-list" reversed start="''' + str(len(main_pubs)) + '''">''' + publications + '''</ol>
   <h3 class="publication-group">Workshop, Demo &amp; Companion Papers</h3>
