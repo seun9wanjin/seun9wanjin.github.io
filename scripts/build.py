@@ -85,9 +85,8 @@ html = '''<!doctype html>
     <a href="https://www.linkedin.com/in/seungwanjin/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.52V9.2h2.82v1.31h.04c.39-.74 1.35-1.52 2.79-1.52 2.98 0 3.53 1.96 3.53 4.51v5.25Z"/></svg></a>
     <a href="https://scholar.google.com/citations?user=OYYoqS0AAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2 0 9l4.7 2.75A7.3 7.3 0 0 1 12 6.7a7.3 7.3 0 0 1 7.3 5.05L24 9 12 2Z"/><circle cx="12" cy="14.3" r="7.3"/><path d="M8.3 14.3h7.4M12 10.6v7.4" stroke="white" stroke-width="0"/></svg></a>
     <a href="https://github.com/seun9wanjin" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .8a11.4 11.4 0 0 0-3.6 22.2c.57.1.78-.25.78-.55v-2.12c-3.18.69-3.85-1.35-3.85-1.35-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.96.1-.74.4-1.25.73-1.54-2.54-.29-5.21-1.27-5.21-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.03 0 0 .96-.31 3.14 1.17A10.9 10.9 0 0 1 12 6.24c.97 0 1.95.13 2.86.38 2.18-1.48 3.14-1.17 3.14-1.17.62 1.58.23 2.74.11 3.03.73.8 1.18 1.82 1.18 3.07 0 4.4-2.68 5.37-5.23 5.65.41.36.78 1.05.78 2.12v3.13c0 .31.2.66.79.55A11.4 11.4 0 0 0 12 .8Z"/></svg></a>
-    <a href="mailto:seungwan@kaist.ac.kr" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="1.5"/><path d="m3 5 9 7 9-7"/></svg></a>
   </div>
-  <div class="profile-info"><h1>Seungwan Jin</h1><p>Postdoctoral Researcher<br>Jang Young Sil Fellow<br><a href="https://www.kaist.ac.kr/en/">KAIST</a></p></div>
+  <div class="profile-info"><h1>Seungwan Jin</h1><p class="profile-email">seungwan (at) kaist.ac.kr</p><p>Postdoctoral Researcher<br>Jang Young Sil Fellow<br><a href="https://www.kaist.ac.kr/en/">KAIST</a></p></div>
 </aside>
 <div class="main-content">
 <section id="about" class="about" aria-labelledby="about-heading">
@@ -131,7 +130,6 @@ html = '''<!doctype html>
 <section id="teaching" class="section teaching" aria-labelledby="teaching-heading"><h2 id="teaching-heading">Teaching</h2>
   <ul class="service-list"><li>Teaching Fellow, Human-Computer Interaction (Fall 2025)</li><li>Co-lecturer, Creative Software Design (Fall 2021, 2022, 2023)</li><li>Co-lecturer, Introduction to Software Design (Spring 2022, 2023)</li></ul>
 </section>
-<p class="email-line"><a href="mailto:seungwan@kaist.ac.kr">seungwan@kaist.ac.kr</a></p>
 </div>
 </main>
 <footer class="site-footer wrap"><p>© 2026 Seungwan Jin</p><p>Updated November 2026 <span aria-hidden="true">·</span> <a href="https://github.com/seun9wanjin/seun9wanjin.github.io">Source</a></p></footer>
