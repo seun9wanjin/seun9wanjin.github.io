@@ -58,7 +58,7 @@ grants = '\n'.join(f'<li><h3>{e(g["program"])}</h3><p class="grant-title">{e(g["
 # Preserve the source order for venues with the same latest service year.
 reviewers = sorted(data['service']['reviewer'], key=lambda v: max(map(int, re.findall(r'\d{4}', v['years']))), reverse=True)
 reviewer_groups = []
-for category, label in [('ai', 'Artificial Intelligence'), ('hci', 'Human–Computer Interaction')]:
+for category, label in [('ai', 'Artificial Intelligence (AI)'), ('hci', 'Human-Computer Interaction (HCI)')]:
     items = '\n'.join(f'<li>{e(v["venue"])} ({e(v["years"])})</li>' for v in reviewers if v['category'] == category)
     reviewer_groups.append(f'<div class="service-group"><h3 class="service-group-title">Reviewer · {e(label)}</h3>\n<ul class="service-list">{items}</ul></div>')
 reviewer_groups = '\n'.join(reviewer_groups)
