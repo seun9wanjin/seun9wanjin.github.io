@@ -14,6 +14,7 @@
   "venues": {
     "NeurIPS": "Conference on Neural Information Processing Systems",
     "CHI": "ACM Conference on Human Factors in Computing Systems",
+    "CHI LBW": "ACM Conference on Human Factors in Computing Systems — Late-Breaking Work",
     "AAAI": "AAAI Conference on Artificial Intelligence",
     "CIKM": "ACM International Conference on Information and Knowledge Management",
     "COLING": "International Conference on Computational Linguistics",
@@ -116,6 +117,7 @@
       ],
       "year": 2025,
       "venue": "CIKM",
+      "track": "Short Paper",
       "type": "conference",
       "status": "published",
       "role": "coauthor",
@@ -314,6 +316,7 @@
       ],
       "year": 2022,
       "venue": "CIKM",
+      "track": "Short Paper",
       "type": "conference",
       "status": "published",
       "role": "first",
@@ -544,10 +547,9 @@
         "category": "ai"
       },
       {
-        "venue": "CHI",
+        "venue": "CHI LBW",
         "years": "2024–2025",
-        "category": "hci",
-        "track": "Late-Breaking Work"
+        "category": "hci"
       },
       {
         "venue": "CSCW",
