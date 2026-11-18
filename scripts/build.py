@@ -26,9 +26,10 @@ def topic(p):
         return 'multimodal'
     return 'interaction'
 
-def venue_label(abbreviation, title=None):
+def venue_label(abbreviation, year, *, journal=False, title=None):
     full_name = title or data['venues'][abbreviation]
-    return f'<abbr class="venue-abbr" title="{e(full_name, quote=True)}">{e(abbreviation)}</abbr>'
+    name = e(full_name) if journal else f'<abbr title="{e(full_name, quote=True)}">{e(abbreviation)}</abbr>'
+    return f'<strong class="venue-year">{name} {e(str(year))}</strong>'
 
 def track_label(record):
     return f' ({e(record["track"])})' if record.get('track') else ''
@@ -55,7 +56,7 @@ def publication(p):
     accepted = ' <span class="status">To appear</span>' if p['status'] == 'accepted' else ''
     return f'''<li class="publication" id="paper-{p['id']}">
       <h3>{title}</h3><p class="authors">{', '.join(authors)}</p>
-      <p class="pub-venue">{venue_label(p['venue'])} {p['year']}{track_label(p)}{accepted}</p>
+      <p class="pub-venue">{venue_label(p['venue'], p['year'], journal=p['type'] == 'journal')}{track_label(p)}{accepted}</p>
       <div class="pub-bottom"><div class="pub-links">{links}</div>{note_html}</div>
     </li>'''
 
@@ -69,13 +70,19 @@ grants = '\n'.join(f'<li><h3>{e(g["program"])}</h3><p class="grant-title">{e(g["
 reviewers = sorted(data['service']['reviewer'], key=lambda v: max(map(int, re.findall(r'\d{4}', v['years']))), reverse=True)
 reviewer_groups = []
 for category, label in [('ai', 'Artificial Intelligence (AI)'), ('hci', 'Human-Computer Interaction (HCI)')]:
-    items = '\n'.join(f'<li>{venue_label(v["venue"], v.get("venue_title"))}{track_label(v)} ({e(v["years"])})</li>' for v in reviewers if v['category'] == category)
+    items = []
+    for v in reviewers:
+        if v['category'] == category:
+            venue = venue_label(v['venue'], f"({v['years']})", journal=v.get('type') == 'journal', title=v.get('venue_title'))
+            items.append(f'<li>{venue}{track_label(v)}</li>')
+    items = '\n'.join(items)
     reviewer_groups.append(f'<div class="service-group"><h3 class="service-group-title">Reviewer · {e(label)}</h3>\n<ul class="service-list">{items}</ul></div>')
 reviewer_groups = '\n'.join(reviewer_groups)
-volunteers = '\n'.join(f'<li>{venue_label(v["venue"])} ({v["year"]})</li>' for v in data['service']['volunteer'])
+volunteers = '\n'.join('<li>' + venue_label(v['venue'], f"({v['year']})") + '</li>' for v in data['service']['volunteer'])
 def award_item(award):
-    issuer = venue_label(award['venue']) if 'venue' in award else e(award['institution'])
-    return f'<li>{e(award["name"])}, {issuer} ({award["year"]})</li>'
+    year = f"({award['year']})"
+    issuer = venue_label(award['venue'], year) if 'venue' in award else f'{e(award["institution"])} {year}'
+    return f'<li>{e(award["name"])}, {issuer}</li>'
 
 awards = '\n'.join(award_item(a) for a in sorted(data['awards'], key=lambda a: -a['year']))
 
@@ -122,8 +129,8 @@ html = '''<!doctype html>
 </section>
 
 <section class="news" aria-labelledby="news-heading"><h2 id="news-heading">Recent News</h2><ul>
-  <li><time datetime="2026">2026</time><p>Our paper on <a href="https://ic.kaist.ac.kr/publications/papers/jin2026dynamic.pdf">longitudinal mental health monitoring</a> was accepted to ''' + venue_label('NeurIPS') + ''' 2026. I will present it in Sydney in December.</p></li>
-  <li><time datetime="2026-10">Oct 2026</time><p><a href="https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf">Sonju</a> received the <a class="news-award" href="https://www.ubicomp.org/ubicomp-iswc-2026/awards-all/">People’s Choice Student Challenge Award</a> at ''' + venue_label('UbiComp/ISWC') + ''' 2026. I co-advised the project with Uichin Lee.</p></li>
+  <li><time datetime="2026">2026</time><p>Our paper on <a href="https://ic.kaist.ac.kr/publications/papers/jin2026dynamic.pdf">longitudinal mental health monitoring</a> was accepted to ''' + venue_label('NeurIPS', 2026) + '''. I will present it in Sydney in December.</p></li>
+  <li><time datetime="2026-10">Oct 2026</time><p><a href="https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf">Sonju</a> received the <a class="news-award" href="https://www.ubicomp.org/ubicomp-iswc-2026/awards-all/">People’s Choice Student Challenge Award</a> at ''' + venue_label('UbiComp/ISWC', 2026) + '''. I co-advised the project with Uichin Lee.</p></li>
   <li><time datetime="2026">2026</time><p>Selected for the <strong>NRF Basic Research Program B (Inclusive Track)</strong> as Principal Investigator.</p></li>
   <li><time datetime="2026-04">Apr 2026</time><p>Joined KAIST as a <strong>Jang Young Sil Fellow (Excellence Track)</strong>.</p></li>
 </ul></section>

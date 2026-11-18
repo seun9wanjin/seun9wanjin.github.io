@@ -547,6 +547,7 @@
       },
       {
         "venue": "IMWUT",
+        "type": "journal",
         "years": "2026",
         "category": "hci"
       },
