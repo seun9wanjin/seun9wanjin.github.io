@@ -28,7 +28,7 @@ def topic(p):
 
 def venue_label(abbreviation, title=None):
     full_name = title or data['venues'][abbreviation]
-    return f'{e(full_name)} (<strong class="venue-abbr">{e(abbreviation)}</strong>)'
+    return f'<abbr class="venue-abbr" title="{e(full_name, quote=True)}">{e(abbreviation)}</abbr>'
 
 def track_label(record):
     return f' ({e(record["track"])})' if record.get('track') else ''
@@ -122,8 +122,8 @@ html = '''<!doctype html>
 </section>
 
 <section class="news" aria-labelledby="news-heading"><h2 id="news-heading">Recent News</h2><ul>
-  <li><time datetime="2026">2026</time><p>Our paper on <a href="https://ic.kaist.ac.kr/publications/papers/jin2026dynamic.pdf">longitudinal mental health monitoring</a> was accepted to the ''' + venue_label('NeurIPS') + ''' 2026. I will present it in Sydney in December.</p></li>
-  <li><time datetime="2026-10">Oct 2026</time><p><a href="https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf">Sonju</a> received the <a class="news-award" href="https://www.ubicomp.org/ubicomp-iswc-2026/awards-all/">People’s Choice Student Challenge Award</a> at the ''' + venue_label('UbiComp/ISWC') + ''' 2026. I co-advised the project with Uichin Lee.</p></li>
+  <li><time datetime="2026">2026</time><p>Our paper on <a href="https://ic.kaist.ac.kr/publications/papers/jin2026dynamic.pdf">longitudinal mental health monitoring</a> was accepted to ''' + venue_label('NeurIPS') + ''' 2026. I will present it in Sydney in December.</p></li>
+  <li><time datetime="2026-10">Oct 2026</time><p><a href="https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf">Sonju</a> received the <a class="news-award" href="https://www.ubicomp.org/ubicomp-iswc-2026/awards-all/">People’s Choice Student Challenge Award</a> at ''' + venue_label('UbiComp/ISWC') + ''' 2026. I co-advised the project with Uichin Lee.</p></li>
   <li><time datetime="2026">2026</time><p>Selected for the <strong>NRF Basic Research Program B (Inclusive Track)</strong> as Principal Investigator.</p></li>
   <li><time datetime="2026-04">Apr 2026</time><p>Joined KAIST as a <strong>Jang Young Sil Fellow (Excellence Track)</strong>.</p></li>
 </ul></section>
