@@ -11,6 +11,27 @@
     "github": "https://github.com/seun9wanjin",
     "lab": "https://ic.kaist.ac.kr/"
   },
+  "venues": {
+    "NeurIPS": "Conference on Neural Information Processing Systems",
+    "CHI": "ACM Conference on Human Factors in Computing Systems",
+    "AAAI": "AAAI Conference on Artificial Intelligence",
+    "CIKM": "ACM International Conference on Information and Knowledge Management",
+    "COLING": "International Conference on Computational Linguistics",
+    "IJCV": "International Journal of Computer Vision",
+    "EMNLP": "Conference on Empirical Methods in Natural Language Processing",
+    "ECCV": "European Conference on Computer Vision",
+    "ACL": "Findings of the Association for Computational Linguistics",
+    "PACMHCI": "Proceedings of the ACM on Human-Computer Interaction",
+    "CVPR": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+    "WWW": "The Web Conference",
+    "ICNGC": "International Conference on Next Generation Computing",
+    "UbiComp/ISWC": "ACM International Joint Conference on Pervasive and Ubiquitous Computing and ACM International Symposium on Wearable Computing",
+    "UIST": "ACM Symposium on User Interface Software and Technology",
+    "IMWUT": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+    "ARR": "ACL Rolling Review",
+    "DSAA": "IEEE International Conference on Data Science and Advanced Analytics",
+    "CSCW": "ACM Conference on Computer-Supported Cooperative Work and Social Computing"
+  },
   "publications": [
     {
       "id": "dycon",
@@ -159,7 +180,7 @@
         "Kyungsik Han"
       ],
       "year": 2025,
-      "venue": "International Journal of Computer Vision",
+      "venue": "IJCV",
       "type": "journal",
       "status": "published",
       "role": "coauthor",
@@ -227,7 +248,7 @@
         "Kyungsik Han"
       ],
       "year": 2024,
-      "venue": "Findings of ACL",
+      "venue": "ACL",
       "type": "conference",
       "status": "published",
       "role": "coauthor",
@@ -247,7 +268,7 @@
         "Kyungsik Han"
       ],
       "year": 2024,
-      "venue": "Proceedings of the ACM on Human-Computer Interaction (CSCW)",
+      "venue": "PACMHCI",
       "type": "journal",
       "status": "published",
       "role": "co-first",
@@ -256,7 +277,8 @@
       "links": {
         "doi": "https://doi.org/10.1145/3686977"
       },
-      "note": "Equal contribution: Eunji Kim and Seungwan Jin"
+      "note": "Equal contribution: Eunji Kim and Seungwan Jin",
+      "track": "CSCW"
     },
     {
       "id": "ice",
@@ -328,7 +350,7 @@
         "Kyungsik Han"
       ],
       "year": 2021,
-      "venue": "The Web Conference (WWW)",
+      "venue": "WWW",
       "type": "conference",
       "status": "published",
       "role": "coauthor",
@@ -347,7 +369,7 @@
         "Kyungsik Han"
       ],
       "year": 2021,
-      "venue": "International Conference on Next Generation Computing (ICNGC)",
+      "venue": "ICNGC",
       "type": "conference",
       "status": "published",
       "role": "first",
@@ -366,17 +388,21 @@
         "Uichin Lee"
       ],
       "year": 2026,
-      "venue": "UbiComp / ISWC Companion — Student Challenge",
+      "venue": "UbiComp/ISWC",
       "type": "companion",
       "status": "published",
       "role": "co-advisor",
       "selected": false,
       "area": "Human-AI interaction",
       "links": {
-        "paper": "https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf",
-        "record": "https://ic.kaist.ac.kr/publications"
+        "paper": "https://ic.kaist.ac.kr/publications/papers/yoo2026sonju.pdf"
       },
-      "note": "People’s Choice Student Challenge Award; co-advised with Uichin Lee"
+      "note": "People’s Choice Student Challenge Award",
+      "track": "Student Challenge",
+      "corresponding_authors": [
+        "Seungwan Jin",
+        "Uichin Lee"
+      ]
     },
     {
       "id": "clinician-explanations",
@@ -388,7 +414,7 @@
         "Uichin Lee"
       ],
       "year": 2026,
-      "venue": "XAI for U Workshop at UbiComp / ISWC",
+      "venue": "UbiComp/ISWC",
       "type": "workshop",
       "status": "published",
       "role": "coauthor",
@@ -396,7 +422,8 @@
       "area": "Mental health & well-being",
       "links": {
         "paper": "https://ic.kaist.ac.kr/publications/papers/kang2026clinician.pdf"
-      }
+      },
+      "track": "XAI for U Workshop"
     },
     {
       "id": "driver-stress",
@@ -412,7 +439,7 @@
         "Hyangmi Kim"
       ],
       "year": 2023,
-      "venue": "UbiComp / ISWC Adjunct — Poster",
+      "venue": "UbiComp/ISWC",
       "type": "companion",
       "status": "published",
       "role": "coauthor",
@@ -420,7 +447,8 @@
       "area": "Mental health & well-being",
       "links": {
         "doi": "https://doi.org/10.1145/3594739.3610691"
-      }
+      },
+      "track": "Poster"
     },
     {
       "id": "fashionq-lbw",
@@ -432,7 +460,7 @@
         "Kyungsik Han"
       ],
       "year": 2020,
-      "venue": "CHI Extended Abstracts",
+      "venue": "CHI",
       "type": "companion",
       "status": "published",
       "role": "coauthor",
@@ -440,7 +468,8 @@
       "area": "Human-AI interaction",
       "links": {
         "doi": "https://doi.org/10.1145/3334480.3382978"
-      }
+      },
+      "track": "Late-Breaking Work"
     }
   ],
   "education": [
@@ -490,9 +519,10 @@
         "category": "hci"
       },
       {
-        "venue": "The Web Conference",
+        "venue": "WWW",
         "years": "2027",
-        "category": "ai"
+        "category": "ai",
+        "venue_title": "The ACM Web Conference"
       },
       {
         "venue": "NeurIPS",
@@ -505,7 +535,7 @@
         "category": "ai"
       },
       {
-        "venue": "ACL Rolling Review",
+        "venue": "ARR",
         "years": "January, March, May 2026",
         "category": "ai"
       },
@@ -525,9 +555,10 @@
         "category": "ai"
       },
       {
-        "venue": "CHI Late-Breaking Work",
+        "venue": "CHI",
         "years": "2024–2025",
-        "category": "hci"
+        "category": "hci",
+        "track": "Late-Breaking Work"
       },
       {
         "venue": "CSCW",
@@ -589,8 +620,8 @@
   "awards": [
     {
       "name": "People’s Choice Student Challenge Award",
-      "institution": "UbiComp / ISWC",
-      "year": 2026
+      "year": 2026,
+      "venue": "UbiComp/ISWC"
     },
     {
       "name": "Best Paper Award",
