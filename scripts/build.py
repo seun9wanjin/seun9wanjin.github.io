@@ -28,10 +28,7 @@ def topic(p):
 def venue_label(abbreviation, year, *, journal=False, title=None, track=None):
     full_name = title or data['venues'][abbreviation]
     name = e(full_name) if journal else f'<abbr title="{e(full_name, quote=True)}">{e(abbreviation)}</abbr>'
-    track_label = ''
-    if track:
-        text = f'· {track}' if track == 'Short Paper' else f'({track})'
-        track_label = f' <span class="venue-track">{e(text)}</span>'
+    track_label = f' <span class="venue-track">({e(track)})</span>' if track else ''
     return f'<span class="venue-year">{name} {e(str(year))}{track_label}</span>'
 
 def publication(p):
