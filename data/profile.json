@@ -24,7 +24,6 @@
     "PACMHCI": "Proceedings of the ACM on Human-Computer Interaction",
     "CVPR": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
     "WWW": "The Web Conference",
-    "ICNGC": "International Conference on Next Generation Computing",
     "UbiComp/ISWC": "ACM International Joint Conference on Pervasive and Ubiquitous Computing and ACM International Symposium on Wearable Computing",
     "UIST": "ACM Symposium on User Interface Software and Technology",
     "IMWUT": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
@@ -249,7 +248,7 @@
       ],
       "year": 2024,
       "venue": "ACL",
-      "track": "Findings",
+      "series": "Findings",
       "type": "conference",
       "status": "published",
       "role": "coauthor",
@@ -360,23 +359,6 @@
       "links": {
         "doi": "https://doi.org/10.1145/3442381.3449833"
       }
-    },
-    {
-      "id": "nivs",
-      "title": "News Information Verification System (NIVS) supporting Heuristic Information Processing and Building a Healthy News Diet",
-      "authors": [
-        "Seungwan Jin",
-        "Hye Jin Jeon",
-        "Kyungsik Han"
-      ],
-      "year": 2021,
-      "venue": "ICNGC",
-      "type": "conference",
-      "status": "published",
-      "role": "first",
-      "selected": false,
-      "area": "Responsible AI",
-      "links": {}
     },
     {
       "id": "sonju",

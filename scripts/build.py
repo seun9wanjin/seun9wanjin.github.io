@@ -26,10 +26,11 @@ def topic(p):
         return 'multimodal'
     return 'interaction'
 
-def venue_label(abbreviation, year, *, journal=False, title=None):
+def venue_label(abbreviation, year, *, journal=False, title=None, series=None):
     full_name = title or data['venues'][abbreviation]
     name = e(full_name) if journal else f'<abbr title="{e(full_name, quote=True)}">{e(abbreviation)}</abbr>'
-    return f'<strong class="venue-year">{name} {e(str(year))}</strong>'
+    series_label = f' ({e(series)})' if series else ''
+    return f'<span class="venue-year">{name} {e(str(year))}{series_label}</span>'
 
 def track_label(record):
     return f' ({e(record["track"])})' if record.get('track') else ''
@@ -43,21 +44,25 @@ def publication(p):
         if author in p.get('corresponding_authors', []):
             rendered += '<sup>†</sup>'
         authors.append(rendered)
-    links = ' '.join(link(url, {'paper':'Paper', 'doi':'DOI', 'code':'Code', 'project':'Project'}[key]) for key, url in p['links'].items())
+    resources = p['links']
+    paper_url = resources.get('doi') or resources.get('paper')
+    links = [link(paper_url, 'Paper')] if paper_url else []
+    for key, label in [('code', 'Code'), ('project', 'Project')]:
+        if resources.get(key):
+            links.append(link(resources[key], label))
     note = p.get('note', '')
     if note.startswith('Equal contribution'):
         note = ''  # A single legend explains all asterisks.
     if p['id'] == 'icev2':
         note = 'Online publication: November 2024'
     is_award = 'Award' in note
-    title_url = p['links'].get('paper') or p['links'].get('doi') or p['links'].get('project')
-    title = link(title_url, e(p['title'])) if title_url else e(p['title'])
+    venue = venue_label(p['venue'], p['year'], journal=p['type'] == 'journal', series=p.get('series'))
     note_html = f'<span class="pub-note {"award" if is_award else ""}">{e(note)}</span>' if note else ''
     accepted = ' <span class="status">To appear</span>' if p['status'] == 'accepted' else ''
     return f'''<li class="publication" id="paper-{p['id']}">
-      <h3>{title}</h3><p class="authors">{', '.join(authors)}</p>
-      <p class="pub-venue">{venue_label(p['venue'], p['year'], journal=p['type'] == 'journal')}{track_label(p)}{accepted}</p>
-      <div class="pub-bottom"><div class="pub-links">{links}</div>{note_html}</div>
+      <h3>{e(p['title'])}</h3><p class="authors">{', '.join(authors)}</p>
+      <p class="pub-venue">{venue}{track_label(p)}{accepted}</p>
+      <div class="pub-bottom"><div class="pub-links">{' '.join(links)}</div>{note_html}</div>
     </li>'''
 
 main_pubs = sorted((p for p in pubs if p['type'] in ['conference', 'journal']), key=lambda p: -p['year'])
