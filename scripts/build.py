@@ -79,7 +79,7 @@ for category, label in [('ai', 'Artificial Intelligence (AI)'), ('hci', 'Human-C
     items = []
     for v in reviewers:
         if v['category'] == category:
-            venue = venue_label(v['venue'], f"({v['years']})", journal=v.get('type') == 'journal', title=v.get('venue_title'), track=v.get('track'))
+            venue = venue_label(v['venue'], f"({v['years']})", title=v.get('venue_title'), track=v.get('track'))
             items.append(f'<li>{venue}</li>')
     items = '\n'.join(items)
     reviewer_groups.append(f'<div class="service-group"><h3 class="service-group-title">Reviewer · {e(label)}</h3>\n<ul class="service-list">{items}</ul></div>')

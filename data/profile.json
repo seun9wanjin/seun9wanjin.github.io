@@ -20,7 +20,7 @@
     "IJCV": "International Journal of Computer Vision",
     "EMNLP": "Conference on Empirical Methods in Natural Language Processing",
     "ECCV": "European Conference on Computer Vision",
-    "ACL": "Findings of the Association for Computational Linguistics",
+    "ACL Findings": "Findings of the Association for Computational Linguistics",
     "PACMHCI": "Proceedings of the ACM on Human-Computer Interaction",
     "CVPR": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
     "WWW": "The Web Conference",
@@ -248,8 +248,7 @@
         "Kyungsik Han"
       ],
       "year": 2024,
-      "venue": "ACL",
-      "track": "Findings",
+      "venue": "ACL Findings",
       "type": "conference",
       "status": "published",
       "role": "coauthor",
