@@ -166,7 +166,8 @@
       "selected": false,
       "area": "Longitudinal personalization",
       "links": {
-        "paper": "https://aclanthology.org/2025.coling-main.382/"
+        "paper": "https://aclanthology.org/2025.coling-main.382/",
+        "code": "https://github.com/Hanyang-HCC-Lab/PADO"
       },
       "note": "Oral presentation"
     },
@@ -248,7 +249,7 @@
       ],
       "year": 2024,
       "venue": "ACL",
-      "series": "Findings",
+      "track": "Findings",
       "type": "conference",
       "status": "published",
       "role": "coauthor",
@@ -256,7 +257,8 @@
       "area": "Responsible AI",
       "links": {
         "doi": "https://doi.org/10.18653/v1/2024.findings-acl.957",
-        "paper": "https://aclanthology.org/2024.findings-acl.957/"
+        "paper": "https://aclanthology.org/2024.findings-acl.957/",
+        "code": "https://github.com/Hanyang-HCC-Lab/LAHN"
       }
     },
     {
@@ -297,7 +299,8 @@
       "area": "Multimodal & interpretable AI",
       "links": {
         "doi": "https://doi.org/10.1109/CVPR52729.2023.01166",
-        "paper": "https://openaccess.thecvf.com/content/CVPR2023/html/Choi_Adversarial_Normalization_I_Can_Visualize_Everything_ICE_CVPR_2023_paper.html"
+        "paper": "https://openaccess.thecvf.com/content/CVPR2023/html/Choi_Adversarial_Normalization_I_Can_Visualize_Everything_ICE_CVPR_2023_paper.html",
+        "code": "https://github.com/Hanyang-HCC-Lab/ICE"
       },
       "note": "Equal contribution: Hoyoung Choi and Seungwan Jin",
       "summary": "Visualizes class-specific evidence in vision transformers through patch-wise classification and adversarial normalization."
@@ -338,7 +341,8 @@
       "selected": false,
       "area": "Human-AI interaction",
       "links": {
-        "doi": "https://doi.org/10.1145/3411764.3445093"
+        "doi": "https://doi.org/10.1145/3411764.3445093",
+        "code": "https://github.com/Hanyang-HCC-Lab/FashionQ"
       }
     },
     {
@@ -357,7 +361,8 @@
       "selected": false,
       "area": "Multimodal & interpretable AI",
       "links": {
-        "doi": "https://doi.org/10.1145/3442381.3449833"
+        "doi": "https://doi.org/10.1145/3442381.3449833",
+        "code": "https://github.com/Hanyang-HCC-Lab/FashionQ"
       }
     },
     {
@@ -450,7 +455,8 @@
       "selected": false,
       "area": "Human-AI interaction",
       "links": {
-        "doi": "https://doi.org/10.1145/3334480.3382978"
+        "doi": "https://doi.org/10.1145/3334480.3382978",
+        "code": "https://github.com/Hanyang-HCC-Lab/FashionQ"
       },
       "track": "Late-Breaking Work"
     }

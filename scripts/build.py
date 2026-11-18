@@ -13,7 +13,6 @@ cv_version = sha256((ROOT / 'assets/docs/CV-Seungwan-Jin.pdf').read_bytes()).hex
 pubs = data['publications']
 by_id = {p['id']: p for p in pubs}
 by_id['fashion-fine']['links']['code'] = 'https://github.com/seun9wanjin/Fashion-FINE'
-by_id['label-aware']['links']['code'] = 'https://github.com/Hanyang-HCC-Lab/LAHN'
 by_id['triple-aaai']['links']['project'] = 'https://yestaehyung.github.io/aaai26-triple/'
 
 def link(url, text, cls=''):
@@ -26,14 +25,11 @@ def topic(p):
         return 'multimodal'
     return 'interaction'
 
-def venue_label(abbreviation, year, *, journal=False, title=None, series=None):
+def venue_label(abbreviation, year, *, journal=False, title=None, track=None):
     full_name = title or data['venues'][abbreviation]
     name = e(full_name) if journal else f'<abbr title="{e(full_name, quote=True)}">{e(abbreviation)}</abbr>'
-    series_label = f' ({e(series)})' if series else ''
-    return f'<span class="venue-year">{name} {e(str(year))}{series_label}</span>'
-
-def track_label(record):
-    return f' ({e(record["track"])})' if record.get('track') else ''
+    track_label = f' ({e(track)})' if track else ''
+    return f'<span class="venue-year">{name} {e(str(year))}{track_label}</span>'
 
 def publication(p):
     authors = []
@@ -56,12 +52,12 @@ def publication(p):
     if p['id'] == 'icev2':
         note = 'Online publication: November 2024'
     is_award = 'Award' in note
-    venue = venue_label(p['venue'], p['year'], journal=p['type'] == 'journal', series=p.get('series'))
+    venue = venue_label(p['venue'], p['year'], journal=p['type'] == 'journal', track=p.get('track'))
     note_html = f'<span class="pub-note {"award" if is_award else ""}">{e(note)}</span>' if note else ''
     accepted = ' <span class="status">To appear</span>' if p['status'] == 'accepted' else ''
     return f'''<li class="publication" id="paper-{p['id']}">
       <h3>{e(p['title'])}</h3><p class="authors">{', '.join(authors)}</p>
-      <p class="pub-venue">{venue}{track_label(p)}{accepted}</p>
+      <p class="pub-venue">{venue}{accepted}</p>
       <div class="pub-bottom"><div class="pub-links">{' '.join(links)}</div>{note_html}</div>
     </li>'''
 
@@ -78,8 +74,8 @@ for category, label in [('ai', 'Artificial Intelligence (AI)'), ('hci', 'Human-C
     items = []
     for v in reviewers:
         if v['category'] == category:
-            venue = venue_label(v['venue'], f"({v['years']})", journal=v.get('type') == 'journal', title=v.get('venue_title'))
-            items.append(f'<li>{venue}{track_label(v)}</li>')
+            venue = venue_label(v['venue'], f"({v['years']})", journal=v.get('type') == 'journal', title=v.get('venue_title'), track=v.get('track'))
+            items.append(f'<li>{venue}</li>')
     items = '\n'.join(items)
     reviewer_groups.append(f'<div class="service-group"><h3 class="service-group-title">Reviewer · {e(label)}</h3>\n<ul class="service-list">{items}</ul></div>')
 reviewer_groups = '\n'.join(reviewer_groups)
