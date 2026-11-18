@@ -56,7 +56,8 @@ def publication(p):
         note_class += ' award'
     elif note == 'Oral presentation':
         note_class += ' oral'
-    venue = venue_label(p['venue'], p['year'], journal=p['type'] == 'journal', track=p.get('track'))
+    conference = p.get('conference')
+    venue = venue_label(conference or p['venue'], p['year'], journal=p['type'] == 'journal' and not conference, track=p.get('track'))
     note_html = f'<span class="{note_class}">{e(note)}</span>' if note else ''
     accepted = ' <span class="status">To appear</span>' if p['status'] == 'accepted' else ''
     return f'''<li class="publication" id="paper-{p['id']}">

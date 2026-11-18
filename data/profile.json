@@ -271,6 +271,7 @@
       ],
       "year": 2024,
       "venue": "PACMHCI",
+      "conference": "CSCW",
       "type": "journal",
       "status": "published",
       "role": "co-first",
@@ -279,8 +280,7 @@
       "links": {
         "doi": "https://doi.org/10.1145/3686977"
       },
-      "note": "Equal contribution: Eunji Kim and Seungwan Jin",
-      "track": "CSCW"
+      "note": "Equal contribution: Eunji Kim and Seungwan Jin"
     },
     {
       "id": "ice",
