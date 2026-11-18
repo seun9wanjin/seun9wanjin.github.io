@@ -3,6 +3,7 @@
   --ink: #202124;
   --muted: #343a40;
   --accent: #155e63;
+  --oral: #594480;
   --award: #815512;
   --line: #dfe5e4;
   --paper: #fff;
@@ -110,6 +111,7 @@ strong { font-weight: 600; }
 .pub-bottom { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
 .pub-links { display: flex; flex-wrap:wrap; gap: 6px 15px; font-size: 15px; font-weight: 550; }
 .pub-note { color: var(--ink); font-size: 15px; }
+.pub-note.oral { color: var(--oral); }
 .pub-note.award { color: var(--award); font-weight: 550; }
 
 /* Grants, background, service, and teaching */

@@ -51,9 +51,13 @@ def publication(p):
         note = ''  # A single legend explains all asterisks.
     if p['id'] == 'icev2':
         note = 'Online publication: November 2024'
-    is_award = 'Award' in note
+    note_class = 'pub-note'
+    if 'Award' in note:
+        note_class += ' award'
+    elif note == 'Oral presentation':
+        note_class += ' oral'
     venue = venue_label(p['venue'], p['year'], journal=p['type'] == 'journal', track=p.get('track'))
-    note_html = f'<span class="pub-note {"award" if is_award else ""}">{e(note)}</span>' if note else ''
+    note_html = f'<span class="{note_class}">{e(note)}</span>' if note else ''
     accepted = ' <span class="status">To appear</span>' if p['status'] == 'accepted' else ''
     return f'''<li class="publication" id="paper-{p['id']}">
       <h3>{e(p['title'])}</h3><p class="authors">{', '.join(authors)}</p>
